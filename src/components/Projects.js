@@ -4,27 +4,35 @@ const Projects = () => {
     const projects = [
         {
             title: "Fake News Detection & Media Integrity Analysis",
-            description: "Machine learning-based system to identify fake or misleading news content.",
-            tech: ["Python", "ML", "NLP"],
-            link: "https://fake-news-detection-media-integrity.onrender.com"
+            problem: "Detecting misinformation and deepfakes in real-time to preserve digital trust.",
+            tech: ["Python", "ML", "NLP", "Streamlit"],
+            status: "Completed",
+            github: "https://github.com/Jayasri7-ux",
+            demo: "https://fake-news-detection-media-integrity.onrender.com"
         },
         {
-            title: "YouTube Channel Performance & Engagement Analytics Dashboard",
-            description: "Analytics dashboard to visualize channel growth and engagement metrics.",
-            tech: ["React", "D3.js", "Node.js"],
-            link: "#"
+            title: "YouTube Channel Performance & Analytics",
+            problem: "Helping creators understand audience engagement through automated data visualization.",
+            tech: ["React", "D3.js", "Python API"],
+            status: "In Progress",
+            github: "https://github.com/Jayasri7-ux",
+            demo: "#"
         },
         {
-            title: "Robust Hydraulic Transient Analysis Model",
-            description: "CFD-based simulation to analyze pressure surges in hydropower systems.",
-            tech: ["C++", "Simulation"],
-            link: "https://the-strivers.github.io/Hydra/"
+            title: "Hydraulic Transient Analysis Model",
+            problem: "Simulating pressure surges in complex piping systems to prevent infrastructure failure.",
+            tech: ["C++", "Simulation", "Numerical Methods"],
+            status: "Completed",
+            github: "https://github.com/Jayasri7-ux",
+            demo: "#"
         },
         {
-            title: "Online Personalized Learning Remediation Tool",
-            description: "Adaptive learning platform built with React, featuring real-time tracking and analytics.",
-            tech: ["React", "Firebase"],
-            link: "#"
+            title: "Online Personalized Learning Tool",
+            problem: "Bridging educational gaps by adapting content to individual student progress.",
+            tech: ["React", "Firebase", "Real-time Analytics"],
+            status: "Completed",
+            github: "https://github.com/Jayasri7-ux",
+            demo: "#"
         }
     ];
 
@@ -35,15 +43,27 @@ const Projects = () => {
                 <div className="projects-grid">
                     {projects.map((project, index) => (
                         <div key={index} className="project-card">
+                            <div className="project-status-tag">{project.status}</div>
                             <h3 className="project-title">{project.title}</h3>
-                            <p className="project-desc">{project.description}</p>
+                            <div className="project-problem">
+                                <strong>Problem:</strong> {project.problem}
+                            </div>
                             <div className="project-tech">
                                 {project.tech.map((tech, idx) => (
                                     <span key={idx} className="tech-tag">{tech}</span>
                                 ))}
                             </div>
-                            <div className="project-links">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-link">View Project &rarr;</a>
+                            <div className="project-action-links">
+                                {project.github && (
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="proj-link">
+                                        🔗 GitHub
+                                    </a>
+                                )}
+                                {project.demo && project.demo !== "#" && (
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="proj-link">
+                                        🌐 Live Demo
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}

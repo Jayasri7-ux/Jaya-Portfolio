@@ -35,7 +35,9 @@ const Navbar = () => {
                     <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
                     <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
                     <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+                    <li><a href="#achievements" onClick={() => setMenuOpen(false)}>Achievements</a></li>
                     <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+                    <li><a href="/assets/resume.pdf" download className="btn-resume">Resume</a></li>
                 </ul>
             </div>
         </nav>

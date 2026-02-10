@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImg from '../assets/profile.jpeg';
 
 const Hero = () => {
     return (
@@ -14,15 +15,18 @@ const Hero = () => {
                     <div className="cta-buttons">
                         <a href="#projects" className="btn btn-primary">View Projects</a>
                         <a href="#contact" className="btn btn-outline">Contact Me</a>
+                        <a href="/assets/resume.pdf" download className="btn btn-outline">Resume</a>
                     </div>
                 </div>
                 <div className="hero-image-container">
-                    {/* Placeholder for now */}
                     <div className="image-blob">
                         <img
-                            src="https://ui-avatars.com/api/?name=Jaya+Sri+Palli&background=6C63FF&color=fff&size=400"
+                            src={profileImg}
                             alt="Jaya Sri Palli"
                             className="profile-img"
+                            onError={(e) => {
+                                e.target.src = "https://ui-avatars.com/api/?name=Jaya+Sri+Palli&background=6C63FF&color=fff&size=400";
+                            }}
                         />
                     </div>
                 </div>

@@ -37,13 +37,3 @@
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
 }
-
-[data-theme='dark'] {
-    --primary-color: #8A84FF;
-    --secondary-color: #1a1a1a;
-    --text-primary: #f8f9fa;
-    --text-secondary: #adb5bd;
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --border-color: #2d2d2d;
-}
