@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Jaya-Portfolio/static/css/main.afdfdc53.css",
+    "main.js": "/Jaya-Portfolio/static/js/main.781a3765.js",
+    "index.html": "/Jaya-Portfolio/index.html",
+    "main.afdfdc53.css.map": "/Jaya-Portfolio/static/css/main.afdfdc53.css.map",
+    "main.781a3765.js.map": "/Jaya-Portfolio/static/js/main.781a3765.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afdfdc53.css",
+    "static/js/main.781a3765.js"
+  ]
+}
