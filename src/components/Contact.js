@@ -25,20 +25,20 @@ const Contact = () => {
                             <a href="https://github.com/Jayasri7-ux" target="_blank" rel="noopener noreferrer" className="social-btn">GitHub</a>
                         </div>
                     </div>
-                </div>
 
-                <form className="contact-form">
-                    <div className="form-group">
-                        <input type="text" placeholder="Your Name" required />
-                    </div>
-                    <div className="form-group">
-                        <input type="email" placeholder="Your Email" required />
-                    </div>
-                    <div className="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Send Message</button>
-                </form>
+                    <form className="contact-form">
+                        <div className="form-group">
+                            <input type="text" placeholder="Your Name" required />
+                        </div>
+                        <div className="form-group">
+                            <input type="email" placeholder="Your Email" required />
+                        </div>
+                        <div className="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" className="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     );

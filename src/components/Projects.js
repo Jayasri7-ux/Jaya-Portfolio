@@ -33,6 +33,15 @@ const Projects = () => {
             status: "Completed",
             github: "https://github.com/Jayasri7-ux",
             demo: "#"
+        },
+        {
+            title: "Task Management System",
+            problem: "Managing tasks efficiently with proper tracking, status updates, and secure access for multiple users.",
+            tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+            status: "Completed",
+            github: "https://github.com/Jayasri7-ux",
+            demo: "https://taskflow-pro-coral.vercel.app"
+
         }
     ];
 
@@ -62,6 +71,11 @@ const Projects = () => {
                                 {project.demo && project.demo !== "#" && (
                                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="proj-link">
                                         🌐 Live Demo
+                                    </a>
+                                )}
+                                {project.backend && (
+                                    <a href={project.backend} target="_blank" rel="noopener noreferrer" className="proj-link">
+                                        ⚙️ Backend API
                                     </a>
                                 )}
                             </div>

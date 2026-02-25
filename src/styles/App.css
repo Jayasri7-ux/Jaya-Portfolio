@@ -140,6 +140,28 @@ body {
     cursor: pointer;
 }
 
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
 /* Hero Styles */
 .hero-section {
     padding-top: 8rem;
@@ -650,6 +672,19 @@ body {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .menu-icon {
