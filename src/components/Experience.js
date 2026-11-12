@@ -1,17 +1,38 @@
 import React from 'react';
+import infosysCert from '../assets/infosys-internship.png';
+import lntCert from '../assets/lnt-internship.png';
+import internpeCert from '../assets/internpe-internship.png';
 
 const Experience = () => {
     const experiences = [
         {
+            role: "Python Intern",
+            company: "Infosys Springboard (Virtual Internship)",
+            date: "February 2026 – March 2026",
+            details: [
+                "Developed a YouTube Analytics Dashboard using Python and Pandas to analyze video performance and automate reporting.",
+                "Processed and analyzed 1,000+ records, tracking 9 KPIs to identify content performance trends and generate actionable insights.",
+                "Created data summaries and visual reports to simplify YouTube channel performance analysis."
+            ],
+            certificate: {
+                label: "Infosys Certificate",
+                image: infosysCert
+            }
+        },
+        {
             role: "Full Stack Developer Intern",
-            company: "L&T",
+            company: "Larsen & Toubro , (Chennai)",
             date: "July 2025 – December 2025",
             details: [
                 "Developed a full-stack audit application using React.js and Django.",
                 "Implemented secure data flow and authentication mechanisms.",
                 "Gained hands-on experience in building scalable, real-world applications.",
                 "Collaborated with senior developers to optimize application performance."
-            ]
+            ],
+            certificate: {
+                label: "L&T Certificate",
+                image: lntCert
+            }
         },
         {
             role: "Data Science & Machine Learning Intern",
@@ -31,7 +52,11 @@ const Experience = () => {
                 "Created multiple small-scale Python projects, showcasing problem-solving and programming skills.",
                 "Used Python libraries such as Pandas, NumPy, and Matplotlib for data processing and visualization.",
                 "Implemented logic-driven solutions for automation and data analysis tasks."
-            ]
+            ],
+            certificate: {
+                label: "InternPe Certificate",
+                image: internpeCert
+            }
         }
     ];
 
@@ -46,13 +71,32 @@ const Experience = () => {
                                 <span className="exp-date">{exp.date}</span>
                                 <div className="exp-company">{exp.company}</div>
                             </div>
-                            <div className="exp-right">
-                                <h3 className="exp-role">{exp.role}</h3>
-                                <ul className="exp-details">
-                                    {exp.details.map((detail, idx) => (
-                                        <li key={idx}>{detail}</li>
-                                    ))}
-                                </ul>
+                            <div className={exp.certificate ? "exp-right exp-right-with-cert" : "exp-right"}>
+                                <div className="exp-info">
+                                    <h3 className="exp-role">{exp.role}</h3>
+                                    <ul className="exp-details">
+                                        {exp.details.map((detail, idx) => (
+                                            <li key={idx}>{detail}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                {exp.certificate && (
+                                    <div className="exp-cert-side">
+                                        <a
+                                            href={exp.certificate.image}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="cert-card"
+                                        >
+                                            <img
+                                                src={exp.certificate.image}
+                                                alt={exp.certificate.label}
+                                                className="exp-cert-img"
+                                            />
+                                            <span className="cert-caption">{exp.certificate.label}</span>
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import resumePdf from '../assets/resume.pdf';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -36,8 +37,9 @@ const Navbar = () => {
                     <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
                     <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
                     <li><a href="#achievements" onClick={() => setMenuOpen(false)}>Achievements</a></li>
+                    <li><a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a></li>
                     <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-                    <li><a href="/assets/resume.pdf" download className="btn-resume">Resume</a></li>
+                    <li><a href={resumePdf} download="Jaya_Sri_Palli_Resume.pdf" className="btn-resume">Resume</a></li>
                 </ul>
             </div>
         </nav>
